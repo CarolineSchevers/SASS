@@ -1,0 +1,74 @@
+// DROPDOWN menu
+li.dropdown {
+  .dropdown-content {
+    display: none;
+  }
+}
+
+li.dropdown.active {
+  .dropdown-content {
+    display: block;
+  }
+}
+/* sidebar-----------------  */
+.nav {
+  grid-area: a;
+  height: auto;
+  background-color: $danger;
+  padding: 50px 30px;
+
+  ul {
+    width: 90%;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    color: $background;
+    list-style: none;
+
+    .sidebar-header {
+      margin-bottom: 30px;
+      border-bottom: 1px dotted tomato;
+    }
+
+    .link-sb {
+      color: $white;
+      font-size: 28px;
+      @extend %links;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fa-laugh-wink {
+      width: 50px;
+      height: auto;
+      font-size: 38px;
+      transform: rotate(-10deg);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    a {
+      @extend %links;
+      color: $white;
+    }
+
+    .collapse-style {
+      @include collapse;
+    }
+  }
+.border-top {
+  width: 100%;
+}
+  .rounded-circle {
+    width: 50px;
+    height: auto;
+
+    img{
+      width: 100%;
+    }
+  }
+}

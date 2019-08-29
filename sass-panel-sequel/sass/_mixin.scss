@@ -1,0 +1,119 @@
+/* 4 boxes beneath "Dashboard" */
+
+
+
+/* padding mixin  default values are 0*/
+
+@mixin padding ($top: 0, $right: 0, $bottom: 0px, $left: 0px) {
+    padding: $top $right $bottom $left;
+}
+
+// COLLAPSE ITEMS
+@mixin collapse {
+    background-color: $white;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 90%;
+    h6 {
+        color: grey;
+        @include padding ($top: 10px, $bottom: 10px);
+    }
+    .collapse-item {
+        @include collapse-items;
+    }
+}
+
+@mixin collapse-items {
+    display: flex;
+    color: #000;
+    text-decoration: none;
+    @include padding ($top: 10px, $left: 5px, $bottom: 10px);
+    &:hover{
+        background-color: $boxhead;
+    }
+}
+
+/****content****/
+
+/* 4 boxes beneath "Dashboard" */
+
+@mixin statistics ($border: #fff, $color: #fff) {
+  border-left: $border;
+  color: $color;
+  border-left: 7px solid;
+  border-radius: 15px;
+  background-color: #fff;
+  margin: 20px;
+}
+
+@mixin colors ($bgcolor: #fff, $color: #fff){
+  background-color: $bgcolor;
+  color: $color;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+
+
+/* card headers */
+
+@mixin cardheader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  background-color: $warning;
+  color: $primary;
+  padding: .75rem 1.25rem;
+    h3{
+      font-size: 16px;
+      font-weight: bold;
+      &:hover{
+        font-size: 18px;
+        transition: .2s;
+      }
+    }
+}
+/*styling for every box*/
+@mixin boxstyle {
+  margin: 20px;
+  background-color: $white;
+  box-shadow: -12px 22px 33px 0 rgba(0, 0, 0, .75);
+}
+
+/*Progress bars*/
+
+@mixin progressbar{
+  width: 100%;
+  background-color: $bg-main;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+@mixin progressbarfill ($bgcolor: #fff){
+  display: block;
+  height: 22px;
+  background-color: $bgcolor;
+  border-radius: 20px;
+  transition: width 500ms ease-in-out;
+}
+
+@mixin blur {
+  -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+}
+@mixin inset {
+  &:hover{
+    -webkit-box-shadow: inset 0px 0px 9px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 9px -1px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 9px -1px rgba(0,0,0,0.75);
+    cursor:pointer;
+      i{
+        transform: scale(1.4);
+        color: grey;
+        transition: 1s;
+      }
+  }
+}
