@@ -1,6 +1,6 @@
 # sass-admin-panel
 * ORIGINAL: https://senneberger.github.io/sasspanel/index.html
-* Theme change: https://craew.github.io/sasspanel/
+* Theme changed to: https://craew.github.io/learning-SASS/sasspanel-themed/
 
 
 # Challenge: Admin panel sequel
